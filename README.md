@@ -28,7 +28,7 @@ how the field of deep learning actually evolved.
 
  PART A — IMPLEMENTATION 5 Marks
 
-Generation 1: Establishing the Baseline 
+**Generation 1: Establishing the Baseline** 
 
 "Before we trust AI with patient lives, we need to know what a simple model can and cannot do."
 Preprocess the dataset: handle missing vitals through imputation, normalize time-series features, and 
@@ -47,9 +47,11 @@ Department of Artificial Intelligence Page 2 of 4
 
 Note: Given the life-critical nature of the task, pay particular attention to Recall in your notebook 
 comments. Explain why a false negative is far more dangerous than a false positive in this context.
-Generation 2: Capturing the Patient Timeline
+
+**Generation 2: Capturing the Patient Timeline**
 
 "A patient's risk is not a snapshot, it is a story told over hours."
+
 Restructure your data as time-series sequences (e.g., hourly vitals windows of 12–24 hours). Load and 
 fine-tune a pre-trained LSTM or GRU model (e.g., from PyTorch Hub or a Keras model zoo entry 
 trained on sequential medical data, or initialize with pre-trained weights and fine-tune on your dataset).
@@ -65,9 +67,10 @@ Your implementation must include:
 • A notebook comment justifying which architecture is appropriate for real-time monitoring vs. 
 retrospective analysis and why
 
-Generation 3: Reading the Clinical Notes 
+**Generation 3: Reading the Clinical Notes**
 
 "Vitals tell you numbers. Notes tell you the story. The best systems read both."
+
 Load a pre-trained Transformer-based model: BioBERT, ClinicalBERT, or PubMedBERT (all available 
 via HuggingFace transformers) and fine-tune it on the free-text clinical notes in your dataset for 
 deterioration risk classification.
