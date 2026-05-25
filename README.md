@@ -2,9 +2,9 @@
 
 **Deep Learning
 Complex Computing Problem 
- “Can AI Save Lives? **
-**Building an Intelligent Clinical Early Warning System”
-Total Marks: 10 (Implementation: 5 | Report: 5)**
+ “Can AI Save Lives?**
+ 
+# **Building an Intelligent Clinical Early Warning System”**
 
 THE CHALLENGE
 
@@ -12,9 +12,11 @@ Every year, thousands of patients in hospitals deteriorate silently, their vital
 notes grow more urgent, and yet the warning signs go unnoticed until it is too late. Hospitals are now 
 turning to AI to build Early Warning Systems that monitor patients continuously and flag those at risk of 
 sepsis, cardiac arrest, or ICU transfer before a crisis occurs.
+
 You have been hired as a Machine Learning Engineer at a healthcare AI startup. Your team has been 
 given access to a real-world clinical dataset and tasked with building a deep learning pipeline that can 
 predict patient deterioration risk from a combination of time-series vital signs and free-text clinical notes. 
+
 Your models must be accurate but more importantly, your decisions must be explainable, because in 
 healthcare a doctor needs to understand why the model flagged a patient, not just that it did.
 Dataset: Use the PhysioNet Sepsis Prediction Challenge dataset (publicly available), or the Patient 
@@ -74,14 +76,20 @@ You do not need to implement attention from scratch. However, your implementatio
 include:
 
 • Correct tokenizer configuration and input formatting for clinical text
+
 • Two fine-tuning strategies: frozen base with trainable head only, and full fine-tuning. Compare 
 performance and training cost between both
+
 • Attention weight extraction and visualization from the final attention layer (e.g., using BertViz or 
 a manual heatmap), identify which clinical terms the model focuses on most
+
 • A classification head appropriate for binary risk prediction
+
 • A per-class performance breakdown: how well does the model detect true deterioration cases 
 vs. stable patients?
+
 Unified Model Comparison
+
 Report all six models in the following table and plot confusion matrices for all models side by side
 
 <img width="1090" height="494" alt="image" src="https://github.com/user-attachments/assets/25d2f0f1-8758-4e0b-8361-f544f1b28ca6" />
