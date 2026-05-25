@@ -33,31 +33,46 @@ Preprocess the dataset: handle missing vitals through imputation, normalize time
 encode categorical variables. Then load and fine-tune a pre-trained DNN or shallow feedforward 
 network (e.g., via scikit-learn's DNN Classifier or a Keras Sequential model with pre-trained weights 
 from a similar medical dataset).
+
 Your implementation must include:
+
 • At least two optimizers (e.g., SGD vs. Adam), plot and compare their loss curves side by side
+
 • Dropout and Batch Normalization as regularization strategies, report the effect of each
 Department of Artificial Intelligence Page 2 of 4
+
 • Accuracy, Precision, Recall, and F1-score on the test set
+
 Note: Given the life-critical nature of the task, pay particular attention to Recall in your notebook 
 comments. Explain why a false negative is far more dangerous than a false positive in this context.
 Generation 2: Capturing the Patient Timeline
+
 "A patient's risk is not a snapshot, it is a story told over hours."
 Restructure your data as time-series sequences (e.g., hourly vitals windows of 12–24 hours). Load and 
 fine-tune a pre-trained LSTM or GRU model (e.g., from PyTorch Hub or a Keras model zoo entry 
 trained on sequential medical data, or initialize with pre-trained weights and fine-tune on your dataset).
+
 Your implementation must include:
+
 • A fine-tuned LSTM and a GRU, report performance and training time differences
+
 • A Bidirectional LSTM variant, evaluate whether it improves over the unidirectional version
+
 • Training vs. validation loss curves for each variant
+
 • A notebook comment justifying which architecture is appropriate for real-time monitoring vs. 
 retrospective analysis and why
+
 Generation 3: Reading the Clinical Notes 
+
 "Vitals tell you numbers. Notes tell you the story. The best systems read both."
 Load a pre-trained Transformer-based model: BioBERT, ClinicalBERT, or PubMedBERT (all available 
 via HuggingFace transformers) and fine-tune it on the free-text clinical notes in your dataset for 
 deterioration risk classification.
+
 You do not need to implement attention from scratch. However, your implementation must 
 include:
+
 • Correct tokenizer configuration and input formatting for clinical text
 • Two fine-tuning strategies: frozen base with trainable head only, and full fine-tuning. Compare 
 performance and training cost between both
@@ -68,3 +83,6 @@ a manual heatmap), identify which clinical terms the model focuses on most
 vs. stable patients?
 Unified Model Comparison
 Report all six models in the following table and plot confusion matrices for all models side by side
+
+<img width="1090" height="494" alt="image" src="https://github.com/user-attachments/assets/25d2f0f1-8758-4e0b-8361-f544f1b28ca6" />
+
